@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: oklab(61.605% -0.14087 0.07085);
+  --color-primary-dark: oklab(50.605% -0.14087 0.07085);
+}
