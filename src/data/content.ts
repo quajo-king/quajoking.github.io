@@ -2,8 +2,8 @@ import type { Experience, Project, Skills } from "../types";
 
 export const skills: Skills = {
   backend: [
-    "PHP 8.2",
-    "Laravel 12",
+    "PHP",
+    "Laravel",
     "MySQL",
     "PostgreSQL",
     "RESTful APIs",
