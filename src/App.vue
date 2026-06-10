@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { ref, computed } from 'vue';
   import { experiences, projects, skills } from './data/content';
-  import { RouterLink } from 'vue-router';
 
   type FilterOption = 'All' | 'SaaS' | 'Enterprise';
 
@@ -29,27 +28,35 @@
   <div
     class="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-blue-100 dark:bg-slate-950 dark:text-slate-100 dark:selection:bg-blue-900/50">
 
-    <!-- ─── Navigation ───────────────────────────────────────── -->
+    <!-- ─── Navigation ─── -->
     <nav
       class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100 dark:bg-slate-950/90 dark:border-slate-800">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" class="font-black text-xl tracking-tighter">
-          quajoletscode
-          <span class="text-primary">.</span>
-        </a>
+        <router-link :to="{ name: 'home' }" class="flex font-black text-xl tracking-tighter">
+          Code
+          <span class="text-primary px-2">
+            With
+          </span>
+          Kingsley
+        </router-link>
+
         <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
-          <a href="#about" class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">About</a>
-          <a href="#experience" class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Experience</a>
-          <a href="#projects" class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Projects</a>
-          <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+          <router-link :to="{ hash: '#about' }"
+            class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">About</router-link>
+          <router-link :to="{ hash: '#experience' }"
+            class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Experience</router-link>
+          <router-link :to="{ hash: '#projects' }"
+            class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Projects</router-link>
+          <router-link :to="{ hash: '#contact' }"
+            class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
             Hire Me
-          </a>
+          </router-link>
         </div>
       </div>
     </nav>
 
     <!-- ─── Hero ─────────────────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 pt-20 pb-28">
+    <section class=" max-w-6xl mx-auto px-6 pt-20 pb-28">
       <div class="flex flex-col gap-7">
         <!-- Live status -->
         <div class="flex items-center gap-3">
@@ -65,7 +72,7 @@
           Kingsley<br />
           <span class="text-primary">Osei Opoku</span>
         </h1>
-        <p class="text-sm font-mono text-slate-400 mt-2 dark:text-slate-500">@quajoletscode</p>
+        <p class="text-sm font-mono text-slate-400 mt-2 dark:text-slate-500">@codewithkingsley</p>
 
         <!-- Tagline -->
         <p class="text-xl md:text-2xl font-light text-slate-500 max-w-2xl leading-relaxed dark:text-slate-300">
@@ -123,23 +130,27 @@
 
           <!-- About text -->
           <div>
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">About</h2>
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">
+              About</h2>
             <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
               Full-stack developer with a strong backend focus, specializing in
               <span class="font-semibold text-slate-800 dark:text-slate-100">Laravel</span>,
               <span class="font-semibold text-slate-800 dark:text-slate-100">PHP</span>, and modern JavaScript
               frameworks. Currently working full-time at
-              <span class="font-semibold text-slate-800 dark:text-slate-100">SuperWeb Technologies</span>, maintaining
+              <span class="font-semibold text-slate-800 dark:text-slate-100">SuperWeb Technologies</span>,
+              maintaining
               GhanaWeb — one of Ghana's highest-traffic web platforms.
             </p>
             <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
               Simultaneously leading enterprise software development at
-              <span class="font-semibold text-slate-800 dark:text-slate-100">Beesofthive Limited</span> and building a
+              <span class="font-semibold text-slate-800 dark:text-slate-100">Beesofthive Limited</span> and
+              building a
               suite of SaaS products through my own startup firm,
               <span class="font-semibold text-slate-800 dark:text-slate-100">
-                <RouterLink to="https://softviewghana.com" target="_blank" class="text-primary hover:underline">
+                <a href="https://softviewghana.com" target="_blank" rel="noopener noreferrer"
+                  class="text-primary hover:underline">
                   Softview Ghana.
-                </RouterLink>
+                </a>
               </span>
             </p>
             <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -150,11 +161,13 @@
 
           <!-- Skills -->
           <div>
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">Skills</h2>
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-6">
+              Skills</h2>
             <div class="space-y-6">
               <div v-for="(category, key) in skillCategories" :key="key">
                 <h3 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">
-                  {{ category }}</h3>
+                  {{ category }}
+                </h3>
                 <div class="flex flex-wrap gap-2">
                   <span v-for="skill in skills[key as keyof typeof skills]" :key="skill"
                     class="px-3 py-1.5 text-sm font-medium bg-white border border-slate-200 text-slate-700 rounded-lg dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200">{{ skill }}</span>
@@ -169,7 +182,8 @@
 
     <!-- ─── Experience ───────────────────────────────────────── -->
     <section id="experience" class="max-w-6xl mx-auto px-6 py-20">
-      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-14">Professional
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-14">
+        Professional
         Experience</h2>
 
       <div class="space-y-14">
@@ -221,7 +235,8 @@
     <section id="projects" class="bg-slate-50 dark:bg-slate-900/40">
       <div class="max-w-6xl mx-auto px-6 py-20">
         <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
-          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Featured Projects
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Featured
+            Projects
           </h2>
           <div class="flex gap-2 flex-wrap">
             <button v-for="filter in filters" :key="filter" @click="activeFilter = filter"
@@ -247,7 +262,8 @@
               {{ project.title }}
             </h3>
             <p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-4">{{ project.tagline }}</p>
-            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">{{ project.description }}</p>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">{{ project.description }}
+            </p>
 
             <div class="flex flex-wrap gap-3 mb-6">
               <span v-for="h in project.highlights" :key="h"
@@ -281,7 +297,8 @@
     <section class="max-w-6xl mx-auto px-6 py-20">
       <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
         <div>
-          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-1.5">Open Source
+          <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-1.5">
+            Open Source
           </h2>
           <p class="text-slate-500 dark:text-slate-400 text-sm">Public repositories on GitHub</p>
         </div>
@@ -302,7 +319,8 @@
           <div class="flex items-start justify-between gap-4">
             <div>
               <h3 class="font-bold text-slate-900 dark:text-slate-100 group-hover:text-primary transition-colors">
-                {{ project.title }}</h3>
+                {{ project.title }}
+              </h3>
               <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">{{ project.tagline }}</p>
             </div>
             <svg
@@ -341,7 +359,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              oseikin7@gmail.com
+              oseikin7@gmail.com / quajokin@gmail.com
             </a>
             <div class="mt-4 flex flex-wrap gap-3">
               <a href="tel:+233549289243"
@@ -350,7 +368,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 5a2 2 0 012-2h3.28a2 2 0 011.9 1.37l1.03 3.09a2 2 0 01-.46 2.05l-1.25 1.25a16 16 0 006.25 6.25l1.25-1.25a2 2 0 012.05-.46l3.09 1.03A2 2 0 0121 15.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
                 </svg>
-                0549289243 (Call/WhatsApp)
+                +233 549 289 243
               </a>
               <a href="https://wa.me/233543093942" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-500 transition-colors text-sm">
@@ -358,7 +376,7 @@
                   <path
                     d="M19.11 4.89A9.82 9.82 0 0012.12 2c-5.4 0-9.8 4.4-9.8 9.8 0 1.73.45 3.43 1.31 4.93L2 22l5.42-1.39a9.75 9.75 0 004.69 1.2h.01c5.4 0 9.8-4.4 9.8-9.8 0-2.62-1.02-5.08-2.81-6.92zM12.12 20a8.14 8.14 0 01-4.15-1.14l-.3-.18-3.22.82.86-3.14-.2-.32a8.12 8.12 0 01-1.24-4.24c0-4.49 3.66-8.15 8.16-8.15a8.1 8.1 0 015.76 2.38 8.08 8.08 0 012.38 5.77c0 4.5-3.66 8.16-8.15 8.16zm4.47-6.07c-.24-.12-1.41-.7-1.63-.78-.22-.08-.37-.12-.53.12-.16.24-.61.78-.75.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.91-1.18-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.39-.4-.53-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.01.4 1.36.52.57.18 1.08.15 1.49.09.45-.07 1.41-.58 1.61-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z" />
                 </svg>
-                0543093942 (WhatsApp)
+                233543093942
               </a>
             </div>
           </div>
@@ -413,8 +431,10 @@
               </svg>
               <div>
                 <p class="font-semibold text-white text-sm">Code Handle</p>
-                <RouterLink to="https://github.com/quajo-king" class="text-slate-300 text-xs font-mono">@quajoletscode
-                </RouterLink>
+                <a href="https://github.com/quajo-king" target="_blank" rel="noopener noreferrer"
+                  class="text-slate-300 text-xs font-mono">
+                  @codewithkingsley
+                </a>
               </div>
             </div>
           </div>
@@ -422,8 +442,10 @@
 
         <div
           class="mt-16 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-          <p>&copy; {{ new Date().getFullYear() }} Kingsley Osei Opoku. Built with Vue 3 &amp; Tailwind CSS v4.</p>
-          <p class="font-mono text-xs">Accra, Ghana 🇬🇭</p>
+          <p class="text-center">
+            &copy; {{ new Date().getFullYear() }} Kingsley Osei Opoku. Built with Vue.js &plus; TS &amp; Tailwind CSS.
+          </p>
+          <p class="font-mono text-xs">Accra, Ghana</p>
         </div>
       </div>
     </footer>
