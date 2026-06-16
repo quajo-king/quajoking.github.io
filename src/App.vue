@@ -31,32 +31,28 @@
     <!-- ─── Navigation ─── -->
     <nav
       class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100 dark:bg-slate-950/90 dark:border-slate-800">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <router-link :to="{ name: 'home' }" class="flex font-black text-xl tracking-tighter">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex font-black text-xl tracking-tighter">
           Code
           <span class="text-primary px-2">
             With
           </span>
           Kingsley
-        </router-link>
+        </a>
 
         <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
-          <router-link :to="{ hash: '#about' }"
-            class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">About</router-link>
-          <router-link :to="{ hash: '#experience' }"
-            class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Experience</router-link>
-          <router-link :to="{ hash: '#projects' }"
-            class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Projects</router-link>
-          <router-link :to="{ hash: '#contact' }"
-            class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
+          <a href="#about" class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">About</a>
+          <a href="#experience" class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Experience</a>
+          <a href="#projects" class="hover:text-slate-900 dark:hover:text-slate-100 transition-colors">Projects</a>
+          <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors">
             Hire Me
-          </router-link>
+          </a>
         </div>
       </div>
     </nav>
 
     <!-- ─── Hero ─────────────────────────────────────────────── -->
-    <section class=" max-w-6xl mx-auto px-6 pt-20 pb-28">
+    <section class=" max-w-5xl mx-auto px-6 pt-20 pb-28">
       <div class="flex flex-col gap-7">
         <!-- Live status -->
         <div class="flex items-center gap-3">
@@ -67,16 +63,24 @@
           <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Open to new opportunities</span>
         </div>
 
-        <!-- Name -->
-        <h1 class="text-3xl md:text-5xl font-black tracking-wide text-slate-900 leading-[1.05] dark:text-slate-100">
-          Kingsley<br />
-          <span class="text-primary">Osei Opoku</span>
-        </h1>
-        <p class="text-sm font-mono text-slate-400 mt-2 dark:text-slate-500">@codewithkingsley</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <!-- Name -->
+            <h1 class="text-3xl md:text-5xl font-black tracking-wide text-slate-900 leading-[1.05] dark:text-slate-100">
+              Kingsley<br />
+              <span class="text-primary">Osei Opoku</span>
+            </h1>
+            <p class="text-sm font-mono text-slate-400 mt-2 dark:text-slate-500">@codewithkingsley</p>
+          </div>
+          <div class="flex items-center justify-center sm:justify-start">
+            <img src="/image/kingsley.png" alt="portrait of Kingsley Osei Opoku"
+              class="aspect-square object-cover size-40 sm:size-35 rounded-full" />
+          </div>
+        </div>
 
         <!-- Tagline -->
         <p class="text-xl md:text-2xl font-light text-slate-500 max-w-2xl leading-relaxed dark:text-slate-300">
-          Full-stack Engineer &amp; SaaS Architect building high-traffic systems and enterprise
+          Full-stack Engineer & SaaS Architect building high-traffic systems and enterprise
           solutions .
         </p>
 
@@ -125,7 +129,7 @@
 
     <!-- ─── About + Skills ───────────────────────────────────── -->
     <section id="about" class="bg-slate-50 dark:bg-slate-900/40">
-      <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="max-w-5xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-2 gap-16 items-start">
 
           <!-- About text -->
@@ -181,7 +185,7 @@
     </section>
 
     <!-- ─── Experience ───────────────────────────────────────── -->
-    <section id="experience" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="experience" class="max-w-5xl mx-auto px-6 py-20">
       <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-14">
         Professional
         Experience</h2>
@@ -233,7 +237,7 @@
 
     <!-- ─── Featured Projects ────────────────────────────────── -->
     <section id="projects" class="bg-slate-50 dark:bg-slate-900/40">
-      <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="max-w-5xl mx-auto px-6 py-20">
         <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
           <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Featured
             Projects
@@ -294,7 +298,7 @@
     </section>
 
     <!-- ─── Open Source Repos ────────────────────────────────── -->
-    <section class="max-w-6xl mx-auto px-6 py-20">
+    <section class="max-w-5xl mx-auto px-6 py-20">
       <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
         <div>
           <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-1.5">
@@ -340,7 +344,7 @@
 
     <!-- ─── Contact / Footer ─────────────────────────────────── -->
     <footer id="contact" class="bg-slate-900 text-white">
-      <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="max-w-5xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-2 gap-16 items-center">
 
           <!-- Contact text -->
