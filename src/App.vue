@@ -80,8 +80,8 @@
 
         <!-- Tagline -->
         <p class="text-xl md:text-2xl font-light text-slate-500 max-w-2xl leading-relaxed dark:text-slate-300">
-          Full-stack Engineer & SaaS Architect building high-traffic systems and enterprise
-          solutions .
+          Full-stack software Engineer & SaaS Architect building high-traffic systems and enterprise
+          solutions.
         </p>
 
         <!-- Skill pills -->
@@ -363,24 +363,23 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              oseikin7@gmail.com / quajokin@gmail.com
+              oseikin7@gmail.com
             </a>
             <div class="mt-4 flex flex-wrap gap-3">
-              <a href="tel:+233549289243"
+              <a href="tel:+233549289243" title="Call"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 text-slate-200 font-semibold rounded-lg hover:bg-slate-700 transition-colors text-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 5a2 2 0 012-2h3.28a2 2 0 011.9 1.37l1.03 3.09a2 2 0 01-.46 2.05l-1.25 1.25a16 16 0 006.25 6.25l1.25-1.25a2 2 0 012.05-.46l3.09 1.03A2 2 0 0121 15.72V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
                 </svg>
-                +233 549 289 243
+                0549 289 243
               </a>
-              <a href="https://wa.me/233543093942" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/233549289243" target="_blank" rel="noopener noreferrer" title="WhatsApp"
                 class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-500 transition-colors text-sm">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M19.11 4.89A9.82 9.82 0 0012.12 2c-5.4 0-9.8 4.4-9.8 9.8 0 1.73.45 3.43 1.31 4.93L2 22l5.42-1.39a9.75 9.75 0 004.69 1.2h.01c5.4 0 9.8-4.4 9.8-9.8 0-2.62-1.02-5.08-2.81-6.92zM12.12 20a8.14 8.14 0 01-4.15-1.14l-.3-.18-3.22.82.86-3.14-.2-.32a8.12 8.12 0 01-1.24-4.24c0-4.49 3.66-8.15 8.16-8.15a8.1 8.1 0 015.76 2.38 8.08 8.08 0 012.38 5.77c0 4.5-3.66 8.16-8.15 8.16zm4.47-6.07c-.24-.12-1.41-.7-1.63-.78-.22-.08-.37-.12-.53.12-.16.24-.61.78-.75.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.91-1.18-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.72-1.74-.19-.46-.39-.4-.53-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.01.4 1.36.52.57.18 1.08.15 1.49.09.45-.07 1.41-.58 1.61-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z" />
                 </svg>
-                233543093942
               </a>
             </div>
           </div>
@@ -397,7 +396,7 @@
               </svg>
               <div>
                 <p class="font-semibold text-white text-sm">GitHub</p>
-                <p class="text-slate-400 text-xs">github.com/quajo-king · 56 public repos</p>
+                <p class="text-slate-400 text-xs">quajo-king · 56 public repos</p>
               </div>
             </a>
 
@@ -415,6 +414,21 @@
               </div>
             </a>
 
+            <a href="https://youtube.com/@codewithkingsley" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 p-4 rounded-xl border border-slate-800 hover:border-slate-600 hover:bg-slate-800 transition-all group">
+
+              <svg class="w-5 h-5 text-slate-400 group-hover:text-white transition-colors shrink-0" fill="currentColor"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23.498 6.186a2.997 2.997 0 0 0-2.11-2.12C19.504 3.5 12 3.5 12 3.5s-7.504 0-9.388.566a2.997 2.997 0 0 0-2.11 2.12C0 8.08 0 12 0 12s0 3.92.502 5.814a2.997 2.997 0 0 0 2.11 2.12C4.496 20.5 12 20.5 12 20.5s7.504 0 9.388-.566a2.997 2.997 0 0 0 2.11-2.12C24 15.92 24 12 24 12s0-3.92-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z" />
+              </svg>
+
+              <div>
+                <p class="font-semibold text-white text-sm">YouTube</p>
+                <p class="text-slate-400 text-xs">@codewithkingsley</p>
+              </div>
+            </a>
+
             <a href="https://softviewghana.com" target="_blank" rel="noopener noreferrer"
               class="flex items-center gap-4 p-4 rounded-xl border border-slate-800 hover:border-slate-600 hover:bg-slate-800 transition-all group">
               <svg class="w-5 h-5 text-slate-400 group-hover:text-white transition-colors shrink-0" fill="none"
@@ -428,19 +442,6 @@
               </div>
             </a>
 
-            <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-800 bg-slate-800/50">
-              <svg class="w-5 h-5 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
-              </svg>
-              <div>
-                <p class="font-semibold text-white text-sm">Code Handle</p>
-                <a href="https://github.com/quajo-king" target="_blank" rel="noopener noreferrer"
-                  class="text-slate-300 text-xs font-mono">
-                  @codewithkingsley
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
